@@ -7,9 +7,9 @@ namespace SelfOutput
     {
         static void Main()
        {
-            char quote = (char)34;
-            char comma = (char)44;
-            var list = new List<string>
+            var quote = (char)34;
+            var comma = (char)44;
+            var codeLineList = new List<string>
             {
                 "using System;",
                 "using System.Collections.Generic;",
@@ -19,24 +19,24 @@ namespace SelfOutput
                 "{",
                 "static void Main()",
                 "{",
-                "char quote = (char)34;",
-                "char comma = (char)44;",
-                "var list = new List<string>",
+                "var quote = (char)34;",
+                "var comma = (char)44;",
+                "var codeLineList = new List<string>",
                 "{",
                 "",
                 "};",
-                "foreach (var item in list)",
+                "foreach (var codeLine in codeLineList)",
                 "{",
-                "if (item == list[12])",
+                "if (codeLine == codeLineList[12])",
                 "{",
-                "foreach (var item2 in list)",
+                "foreach (var listLine in codeLineList)",
                 "{",
-                "Console.WriteLine(quote + item2 + quote + comma); ",
+                "Console.WriteLine(quote + listLine + quote + comma);",
                 "}",
                 "}",
                 "else",
                 "{",
-                "Console.WriteLine(item); ",
+                "Console.WriteLine(codeLine);",
                 "}",
                 "}",
                 "Console.ReadLine();",
@@ -44,18 +44,18 @@ namespace SelfOutput
                 "}",
                 "}",
             };
-            foreach (var item in list)
+            foreach (var codeLine in codeLineList)
             {
-                if (item == list[12])
+                if (codeLine == codeLineList[12])
                 {
-                    foreach (var item2 in list)
+                    foreach (var listLine in codeLineList)
                     {
-                        Console.WriteLine(quote + item2 + quote + comma);
+                        Console.WriteLine(quote + listLine + quote + comma);
                     }
                 }
                 else
                 {
-                    Console.WriteLine(item);
+                    Console.WriteLine(codeLine);
                 }
             }
             Console.ReadLine();
